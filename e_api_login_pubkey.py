@@ -546,7 +546,7 @@ def main():
         # ログインメインシーケンスの実行
         func_login(my_auth_id, my_private_key, FNAME_URL_INFO)
         
-        print(f"利用中のAuthID: {my_auth_id}")
+        print(f"利用中のAuthID: {my_auth_id[:3] + '*********' + my_auth_id[-3:]}")
         print("API自動ログイン処理がすべて正常に完了しました。")
         
     except ConnectionError as ce:
